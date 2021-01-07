@@ -10,10 +10,13 @@
 import csv
 import os
 
-# Assign a variable to the file  to load and the path
+# Assign a variable for the path to the file to load
 file_to_load = os.path.join('Resources', 'election_results.csv')
-# Assigna variable to save the file to a path
+# Assigna variable for the path to the file to save
 file_to_save = os.path.join('analysis', 'election_analysis.txt')
+
+ # Initialize the total vote counter as a variable at 0
+total_votes = 0
 
 #Open the election results and read the file
 with open(file_to_load) as election_data:
@@ -24,3 +27,5 @@ with open(file_to_load) as election_data:
     # Print the header row
     headers = next(file_reader)
     print(headers)
+
+    # Print each row in the CSV file
