@@ -67,4 +67,4 @@ Another potential modification could be made to the code to accomodate elections
 
 ![2nd county code block](Resources/county_code.png)
 
-
+Replacing "county" in this code with city, parish, etc. would result in the appropriate term being output to the results summary in the text file.
