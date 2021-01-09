@@ -61,7 +61,7 @@ Other variations in the election format may necessitate minimal edits to the cod
 
 Additionally, the second line of code from this excerpt, which currently references the county name from the original source data, could be commented out with "#" so it would not run as there would not be a county name in the hypothetical discussed.  Other lines of code in the script which collect information on the county turnout could also be commented out in this hypothetical.  Commenting out the lines of code that analyze county data in this scenario is preferable to simply deleting the code, so that in future election audits that would include county data, those lines could easily reinstated by undoing the commenting.
 
-Another potential modification could be made to the code to accomodate elections that occur over various cities, districts, or parishes, rather than counties.  In order to collect date by city, etc., the word "county" or "counties" used in various strings and variable names in the below excerpts of code could simply be substituted with city, etc.
+Another potential modification could be made to the code to accomodate elections that occur over various cities, districts, or parishes, rather than counties.  In order to collect date by city, etc., the word "county" used in various strings and variable names in the below excerpts of code could simply be substituted with city, etc.
 
 ![1st county code block](Resources/county_code_1.png)
 
