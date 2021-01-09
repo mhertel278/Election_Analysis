@@ -49,8 +49,22 @@ The analysis of the counties data show:
   - Denver with 82.8% of the total vote and 306,055 votes.
   
 ## Use in Other Elections
+The pthyon script used to analyze the election data and write the results to the text file could easily be used again to audit future elections or other existing elections.  Below is the section of the code that in part tracks additional candidates as it finds them.
+
 ![Candidate Loop](Resources/candidate_count_loop.png)
+
+A similar section of code to this that tracks the counties and adds additional ones as it finds them follows the same structure.  Because the script is designed to track candidate names and counties as it loops through the election data, no changes to the script at all would be necessary to accomodate elections with differing numbers of candidates or that include varying number of counties.
+
+Other variations in the election format may necessitate minimal edits to the code to accomodate.  For instance, an election that takes place all within one county would likely not have the county information included in the raw data is it was with the CSV for this election.  If only the ballot number and the candidate being voted for on that ballot are included in the data, the index number in brackets in the first line of code below would need to be changed from 2 to 1 to accomodate the candidate's name being in a different position within the source data
+
+![candidate index](Resources/candidate_index.png)
+
+Additionally, the second line of code from this excerpt, which currently references the county name from the original source data, could be commented so it would not run as there would not be a county name in the hypothetical discussed.  Other lines of code in the script which collect information on the county turnout could also be commented out in this hypothetical.  Commenting out the lines of code that analyze county data in this scenario is preferable to simply deleting the code, so that in future election audits that would include county data, those lines could easily reinstated by undoing the commenting.
+
+Another potential modification could be made to the code to accomodate elections that occur over various cities, districts, or parishes, rather than counties.  In order to collect date by city, etc., the word "county" or "counties" used in various strings and variable names in the below excerpts of code could simply be substituted with city, etc.
+
 ![1st county code block](Resources/county_code_1.png)
+
 ![2nd county code block](Resources/county_code.png)
 
 
