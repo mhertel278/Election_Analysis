@@ -49,11 +49,11 @@ The analysis of the counties data show:
   - Denver with 82.8% of the total vote and 306,055 votes.
   
 ## Use in Other Elections
-The pthyon script used to analyze the election data and write the results to the text file could easily be used again to audit future elections or other existing elections.  Below is the section of the code that in part tracks additional candidates as it finds them.
+The pthyon script used to analyze the election data and write the results to the text file could easily be used again to audit future elections or other existing elections.  Because the script is designed to track candidate names and counties as it loops through the election data, no changes to the script at all would be necessary to accomodate elections with differing numbers of candidates or that include varying number of counties.  Below is the section of the code that in part tracks additional candidates as it finds them.
 
 ![Candidate Loop](Resources/candidate_count_loop.png)
 
-A similar section of code to this that tracks the counties and adds additional ones as it finds them follows the same structure.  Because the script is designed to track candidate names and counties as it loops through the election data, no changes to the script at all would be necessary to accomodate elections with differing numbers of candidates or that include varying number of counties.
+A similar section of code that tracks the counties and adds additional ones as it finds them follows the same structure.  
 
 Other variations in the election format may necessitate minimal edits to the code to accomodate.  For instance, an election that takes place all within one county would likely not have the county information included in the raw data is it was with the CSV for this election.  If only the ballot number and the candidate being voted for on that ballot are included in the data, the index number in brackets in the first line of code below would need to be changed from 2 to 1 to accomodate the candidate's name being in a different position within the source data
 
